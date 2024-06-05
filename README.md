@@ -30,11 +30,10 @@
 
 ### Firing up the server
 
-* Run the server using `python manage.py runserver` and navigate to [http:localhost:8000](http://localhost:8000).
+* Run the server using `python manage.py runserver` and navigate to [http://localhost:8000](http://localhost:8000).
 
 * There are 2 endpoints available:
 
   * /trucks - A GET request to this endpoint returns **all** the food trucks present in the database, that have a facility type of `Truck` and have a permit that is either in the `Issued` or `Approved` state (we don't want to show the user food trucks/restaurants with expired or suspended permits).
 
   * /find - A POST request with two required parameters (`latitude` and `longitude`, of type floating-point) to this endpoint returns the 10 food trucks that are closest to the coordinates provided. Again, only those establishments that have a facility type of `Truck` and active permits are shown.
-  
